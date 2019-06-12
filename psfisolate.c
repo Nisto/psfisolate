@@ -81,7 +81,7 @@ typedef struct {
 } psf_tag_t;
 
 typedef struct {
-	unsigned int    depth;
+  unsigned int    depth;
   char          * dirpath;
   uint32_t        text_start;
   uint32_t        text_end;
@@ -515,7 +515,7 @@ psf_tag_t *process_tag_line(psf_tag_t *tags, char *line)
 
   /* if a _name tag appears more than once in a file, keep the first value */
 
-	if (*name == '_') {
+  if (*name == '_') {
     if (find_tag(tags, name) != NULL) {
       return tags;
     }
@@ -675,11 +675,6 @@ uint8_t psf_load(psf_load_state_t *state, const char *filename)
         // the Crash Team Racing set on JoshW has a "_vrefresh" tag, which
         // foo_psf doesn't like (won't play at all when tags are combined),
         // so I guess we'll have to explicitly check _name tags
-
-        // if (*tag->name != '_' || strncasecmp(tag->name, "_lib", 4) == 0 || strcasecmp(tag->name, "_refresh") == 0)
-        // if (*tag->name != '_' || strcasecmp(tag->name, "_refresh") == 0) {
-        // if (*tag->name != '_' || !is_lib_tag(tag->name)) {
-
         if (*tag->name != '_' || is_lib_tag(tag->name) || strcasecmp(tag->name, "_refresh") == 0) {
           if (find_tag(state->tags, tag->name) == NULL) {
             state->tags = add_tag(state->tags, tag->name, tag->value);
