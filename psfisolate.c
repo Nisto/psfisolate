@@ -765,8 +765,8 @@ uint8_t psf_load(psf_load_state_t *state, const char *filename)
     t_addr = get_u32_le(exe_decompressed_buffer + 0x18);
     t_size = get_u32_le(exe_decompressed_buffer + 0x1C);
 
-    if (EXE_HEADER_SIZE + t_size != exe_decompressed_size) {
-      printf("EXE size does not match with header.\n");
+    if (EXE_HEADER_SIZE + t_size > exe_decompressed_size) {
+      printf("Decompressed EXE missing data.\n");
       goto error;
     }
 
