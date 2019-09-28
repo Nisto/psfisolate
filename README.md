@@ -1,6 +1,6 @@
 # psfisolate
 
-Sample isolation tool for PSF1 files.
+Isolates samples in PSF(1) files, which gives you the power to hear exactly how each sample is played, create your own mixes, and more. Samples are automatically located and dumped to separate mini/PSF files.
 
 ## Usage
 
