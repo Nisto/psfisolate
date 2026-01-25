@@ -1,6 +1,8 @@
 # psfisolate
 
-Isolates audio samples in PSF(1) (Portable Sound Format for PlayStation 1) files, which gives you the power to hear exactly how each sample is played, create your own mixes, and more. Samples are automatically located and dumped to separate mini/PSF files.
+Isolates audio samples in PSF1 (Portable Sound Format for PlayStation 1) files, which gives you the power to hear exactly how each sample is played, create your own mixes, and more. Samples are automatically located and dumped to separate mini/PSF files.
+
+For isolating PSF2 files, see [psf2isolate](https://github.com/Nisto/psf2isolate).
 
 ## Usage
 
